@@ -18,7 +18,7 @@ I used **PyMuPDF** to read the PDF and analyze the font size and weight of each 
 
 ## 📁 Input Format
 
-All input PDFs are placed in the `/input` directory.
+All input PDFs are placed in the **/input** directory.
 
 ---
 
@@ -32,14 +32,7 @@ How to Run It (Docker)
 docker run --rm -v ${PWD}/Datasets/input:/app/input -v ${PWD}/Datasets/output:/app/output --network none heading_extractor:1a
 
 
-Challenge - 1(a)/
-├── Datasets/
-│   ├── input/
-│   └── output/
-├── process_pdfs.py
-├── Dockerfile
-├── requirements.txt
-├── README.md
+
 
 
 
@@ -81,20 +74,6 @@ Put the following in the **input** folder:
 - One **persona.json** file
 - 3–10 PDF files
 
-
-Folder structure
-
-Collection 1b/
-├── input/
-│   ├── persona.json
-│   └── *.pdf
-├── output/
-│   └── output.json
-├── app/
-│   ├── main.py
-│   └── requirements.txt
-├── Dockerfile
-├── README.md
 
 How to run
 docker build --platform linux/amd64 -t persona_analyzer:1b .
