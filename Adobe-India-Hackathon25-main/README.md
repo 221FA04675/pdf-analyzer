@@ -24,24 +24,7 @@ All input PDFs are placed in the `/input` directory.
 
 ## 🧾 Output Format
 
-The output for each PDF is saved in `/output/filename.json` with this structure:
-
-```json
-{
-  "title": "E0H1CM114",
-  "outline": [
-    {
-      "level": "H1",
-      "text": "Executive Summary",
-      "page": 2
-    },
-    {
-      "level": "H2",
-      "text": "Goals and Objectives",
-      "page": 3
-    }
-  ]
-}
+The output for each PDF is saved in **/output.json** with this structure:
 
 
 How to Run It (Docker)
@@ -65,47 +48,38 @@ Challenge - 1(a)/
 
 ---
 
-## 🟦 `Challenge_1b/Collection 1/README.md`
+## 🟦 `Challenge_1b/README.md`
 
-```markdown
+markdown
 # Challenge 1B – Persona-Based Document Analysis
 
 This is my submission for Challenge 1B of the Adobe Hackathon.  
 Here, the task was to simulate a smart assistant that understands the user's intent (persona + task) and extracts the most relevant information from several PDFs.
 
----
 
 ## 🧠 What I Built
 
 The system:
-- Reads a `persona.json` describing who the user is and what they want to do
+- Reads a **persona.json** describing who the user is and what they want to do
 - Analyzes all the PDFs in the input folder
 - Ranks the most relevant pages or sections using a transformer model
 - Generates short summaries of those key sections
 - Saves everything in a structured `output.json`
 
----
 
 ## 🛠 Tools I Used
 
-- `PyMuPDF` for PDF parsing
-- `sentence-transformers (MiniLM)` to match the user’s intent with PDF content
-- `nltk` for basic text summarization
+- **PyMuPDF** for PDF parsing
+- **sentence-transformers (MiniLM)** to match the user’s intent with PDF content
+- **nltk** for basic text summarization
 - Docker to make sure everything runs offline and reproducibly
 
----
 
 ## 📁 Input Format
 
-Put the following in the `input/` folder:
-- One `persona.json` file
+Put the following in the **input** folder:
+- One **persona.json** file
 - 3–10 PDF files
-
-```json
-{
-  "persona": "Digital Strategy Consultant",
-  "job_to_be_done": "Evaluate government and education digital transformation plans"
-}
 
 
 Folder structure
